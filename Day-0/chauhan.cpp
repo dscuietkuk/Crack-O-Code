@@ -6,7 +6,7 @@ int main() {
   freopen("input.txt", "r", stdin);
   freopen("output.txt", "w", stdout);
 #endif
-  int arr[5], sum = 0;
+  long long int arr[5], sum = 0;
   
   for(int i = 0; i < 5; i++) {
     cin >> arr[i];
