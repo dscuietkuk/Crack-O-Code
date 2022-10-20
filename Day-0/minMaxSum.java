@@ -16,7 +16,7 @@ public class HacktoberFest1 {
 				min=sumFinal;
 			}
 		}
-		System.out.println("The maximum sum is "+ max +" and minimum sum is " + min);
+		System.out.println( max +" " + min);
 		
 	}
 
