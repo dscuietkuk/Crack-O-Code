@@ -23,8 +23,6 @@ The second line contains n space-separated integers, each an a[i].</h3>
     <li>0 < ar[i] < 100</li>
     <li>The answer will be >=2</li>
 </ul></h3>
-<h1>Output Format</h1>
-<h3>Print two space-separated long integers denoting the respective minimum and maximum values that can be calculated by summing exactly four of the five integers. </h3>
 <h1>Sample Input</h1>
 <h3>6<br>
 4 6 5 3 3 1</h3>
