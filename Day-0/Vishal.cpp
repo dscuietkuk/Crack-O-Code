@@ -21,6 +21,5 @@ int main()
 
     cout<<mini<<" "<<maxi;
     
-    
     return 0;
 }
