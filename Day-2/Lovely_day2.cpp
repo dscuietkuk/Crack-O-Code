@@ -1,17 +1,11 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-int main()
-{
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    sort(arr, arr + n);
-    int ans = 1;
+
+int maxLen(int arr[], int n){
+
+sort(arr, arr + n);
+    int ans = 1;    
     int len;
     for (int i = 0; i < n; i++)
     {
@@ -23,6 +17,20 @@ int main()
         len = end + 1 - i;
         ans = max(len, ans);
     }
-    cout << ans;
+
+return ans;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    
+    cout << maxLen(arr,n);
     return 0;
 }
