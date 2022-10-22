@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 
-int maxLen(int arr[], int n){
+int pickingNumbers(int arr[], int n){
 
 sort(arr, arr + n);
     int ans = 1;    
@@ -31,6 +31,6 @@ int main()
         cin >> arr[i];
     }
     
-    cout << maxLen(arr,n);
+    cout << pickingNumbers(arr,n);
     return 0;
 }
