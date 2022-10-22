@@ -33,4 +33,4 @@ The second line contains n space-separated integers, ar[i], the colors of the so
 <h1>Sample Output</h1>
 <h2>3</h2>
 <h1>Explanation</h1>
-![](./explanation.png)
+<img src="./explanation.png"></img>
