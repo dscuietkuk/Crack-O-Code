@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -5,7 +6,7 @@ using namespace std;
 int pickingNumbers(int arr[], int n){
 
 sort(arr, arr + n);
-    int ans = 1;    
+    int ans = 1;
     int len;
     for (int i = 0; i < n; i++)
     {
