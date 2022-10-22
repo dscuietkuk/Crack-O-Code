@@ -33,4 +33,4 @@ The second line contains n space-separated integers, ar[i], the colors of the so
 <h1>Sample Output</h1>
 <h2>3</h2>
 <h1>Explanation</h1>
-<h3>![Explanation](https://github.com/dscuietkuk/Crack-O-Code/blob/main/Day-3/explanation.png?raw=true)</h3>
+<h3>![](./explanation.png)</h3>
