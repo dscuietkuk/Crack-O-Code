@@ -6,7 +6,7 @@ int pickingNumbers(int n, int a[]){
 	int x,min,max,y;
 	for(int i=0;i<n;i++){
 		int* b = new int[n];
-    	int m=0;
+    	        int m=0;
 		for(int j=0;j<n;j++){
 			x = a[i]-a[j];
 			if(x==0 || x==1 || x==(-1)){
@@ -23,6 +23,9 @@ int pickingNumbers(int n, int a[]){
 			}
 		}
 		delete[] b;
+	}
+	if(max_subarray<2){
+		max_subarray=2;
 	}
 	return(max_subarray);
 }
