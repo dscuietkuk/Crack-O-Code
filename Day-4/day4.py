@@ -1,5 +1,5 @@
 tt= int(input())
-for j in range(tt):
+for k in range(tt):
     n=int(input())
     x=[int(x) for a,x in enumerate(str(n))]
     count=0
