@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int findDigits(int n){
+	int divisor,count=0;
+	int m = n;
+	while(m){
+		divisor = m%10;
+		m/=10;
+		if(divisor!=0){
+			if(n%divisor==0){
+		    	count++;
+		    }
+		}
+		else{
+			continue;
+		}
+	}
+	return(count);
+}
+int main(){
+	int t;
+	cin>>t;
+	int n;
+	int arr[t];
+	for(int i=0;i<t;i++){
+		cin>>n;
+		arr[i]=findDigits(n);
+	}
+	for(int i=0;i<t;i++){
+		cout<<arr[i]<<endl;
+	}
+	return 0;
+}
