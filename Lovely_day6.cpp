@@ -4,7 +4,7 @@
 #include<math.h>
 using namespace std;
 
-vector<char> encryption(vector<char> s){
+string encryption(string s){
     vector<char> res;
     int len = s.size();
     int n = ceil(sqrt(len));
@@ -20,7 +20,11 @@ vector<char> encryption(vector<char> s){
         }
         res.push_back(' ');
     }
-    return res;
+    string answer = "";
+     for(int i = 0;i<res.size();i++){
+        answer = answer + res[i];
+    }
+    return answer;
 }
 
 int main(){
@@ -36,8 +40,9 @@ for(int i = 0;i<s.size();i++){
         v.push_back(s[i]);
     }
 }
-vector<char> res = encryption(v);
-for(int i = 0;i<res.size();i++){
-    cout<<res[i];
-}
+string final = "";
+ for(int i = 0;i<v.size();i++){
+        final = final + v[i];
+    }
+    cout<<encryption(final);
 return 0;}
