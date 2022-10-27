@@ -1,49 +1,44 @@
+
 import math
-s=input()
-s=s.replace(" ", '')
-lengths=len(s)
-lists=list(s.strip(" "))
-rows=math.floor((lengths**.5))
-columns=math.ceil(lengths**.5)
-product=rows*columns
-if product<lengths:
-    rows=math.ceil(lengths**.5)
-list2=[]
-while len(lists) !=0:
-    list3=lists[:columns]
-    lol_string = ''.join(map(str, list3))
-    list2.append(lol_string)
-    lists=lists[columns:]
-    #print(lists)
-#print(list2)
-list4=[]
-for i in list2:
-    lst=list(i.strip(" "))
-    list4.append(lst)
+string = input()
 
+temp = 0
+string1 = ""
+for x in string.split():
+    temp = temp + len(x)
+    string1 = string1 + x
 
-def x(arr):
-    for i in arr:
-        if len(i)==0:
-            print("",end="")
-        else:   
-            return False
+length = temp
+temp = math.sqrt(temp)
+floor = math.floor(temp)
+ceil = math.ceil(temp)
 
-    return True
-while  list4 !=0: 
-        
-        for i in list4:
-                s=x(list4)
-                if s==False:
-                    if len(i)!=0:
-                        print(i[0],end="")
-                        i.pop(0)
-                else:
-                    break
-                
-        if s==True:
-                break
-                    
-                
-                
-        print("",end=" ")
+row = floor #no. of char in the line
+col = ceil #next line
+
+if (floor<=row<=col<=ceil and row*col>=temp):
+    start = 0; end = col; string2=""; final = ""
+    for x in range(0, col):
+        string2 = string2 + string1[start:end] + "\n"
+        start = start + col;
+        end = end + col;
+    L = string2.split("\n")
+    check1 = L.pop()
+    count = 0;
+    val = 0
+    while(count<length):
+        for x in L:
+            try:
+                final = final + x[val]
+                count = count + 1
+            except:
+                continue;
+        val = val + 1
+        if (val%len(L[0]) == 0):
+            val=0
+        final = final + " "
+
+    print(final.rstrip())# By - Hiten Samalia
+else:
+    print(False)
+
