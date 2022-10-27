@@ -1,3 +1,4 @@
+
 import math
 string = input()
 
