@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+int sockMerchant(int n, int a[]){
+	sort(a, a+n);
+	int sum=1;
+	int sock_pairs=0;
+	for(int i=0;i<n;i++){
+		if(a[i]==a[i+1]){
+			sum++;
+		}
+		else{
+			if(sum%2==0){
+				sock_pairs += sum/2;
+			}
+			else{
+				sock_pairs += (sum-1)/2;
+			}
+			sum=1;
+		}
+	}
+	return(sock_pairs);
+}
+int main(){
+	int n,i;
+	cin>>n;
+	int a[n];
+	for(i=0;i<n;i++){
+	    cin>>a[i];	
+	}
+	cout<<sockMerchant(n,a);
+	return 0;
+}
